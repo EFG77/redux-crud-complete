@@ -4,7 +4,6 @@ import {
   createUser,
   editUsers,
   updateUsers,
-  editData,
 } from "../Reducers/users_reducer";
 
 const Form = () => {
@@ -27,6 +26,8 @@ const Form = () => {
       id: Math.floor(Math.random() * 1000),
     };
     dispatch(createUser(newStudent));
+    setName('');
+    setGen('');
   };
 
   const handleEdit = (e) => {
